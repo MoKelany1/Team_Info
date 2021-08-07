@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --red-color: hsl(0, 78%, 62%);
+    --cyan-color: hsl(180, 62%, 55%);
+    --orange-color: hsl(34, 97%, 64%);
+    --blue-color: hsl(212, 86%, 64%);
+
+    --dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98%);
+
+    --poppin-font:'Poppins', sans-serif;
+}
+body {
+    font-size: 15px;
+    font-family: var(--poppin-font);
+    background-color: var(--light-gray)
+}
+.container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.container .head-1 {
+    font-weight: normal;
+    width: fit-content;
+    margin: 0 auto 10px !important;
+}
+.container .head-2 {
+    width: fit-content;
+    margin: 0 auto 15px !important;
+}
+.container p {
+    color: var(--dark-blue);
+}
+.container .head-p {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto 70px;
+}
+.container .content {
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (max-width: 900px) {
+    .container .content {
+        flex-direction: column;
+    }
+    .container .head-p {
+        width: 300px;
+    }
+}
+.container .content .card {
+    flex-basis: 30%;
+    display: flex;
+}
+.container .content .card img {
+    width: 60px;
+}
+.container .content .col-1 {
+    align-items: center;
+}
+.container .content .col-1 .supervivor {
+    flex-basis: 100%;
+    background-color: white;
+}
+.container .content .col-2 {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container .content .col-2 .builder {
+    flex-basis: 100%;
+    background-color: white;
+    margin-bottom: 30px;
+}
+.container .content .col-2 .karma {
+    flex-basis: 100%;
+    background-color: white;
+}
+.container .content .col-3 {
+    align-items: center;
+}
+.container .content .col-3 .calculator {
+    flex-basis: 100%;
+    background-color: white;
+}
+.container .content .card .info {
+    padding: 20px 10px 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 19px 20px 0px #0000004a;
+    min-width: 250px;
+    max-width: 450px;
+}
+@media (max-width: 900px) {
+    .container .content .col-1 .supervivor,
+    .container .content .col-2 .karma {
+        margin-bottom: 30px;
+    }
+    .container .content .card .info { 
+        flex-basis: 90%;
+    }
+    .container .content .card {
+        justify-content: center;
+    }
+}
+.container .content .card .info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.container .content .card .info p {
+    width: 80%;
+    color: var(--dark-blue);
+    margin-bottom: 50px;
+}
+.container .content .card .info img {
+    margin-left: 78%;
+}
+.container .content .card .supervivor {
+    border-top: 5px solid var(--cyan-color);
+}
+.container .content .card .builder {
+    border-top: 5px solid var(--red-color);
+}
+.container .content .card .karma {
+    border-top: 5px solid var(--orange-color);
+}
+.container .content .card .calculator {
+    border-top: 5px solid var(--blue-color);
+}
